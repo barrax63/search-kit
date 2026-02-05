@@ -31,6 +31,6 @@ Search Kit is a minimal Docker Compose setup that runs [SearXNG](https://docs.se
 - Nginx: `https://localhost:8443/health`
 - SearXNG: `http://localhost:8080/healthz` (inside the container network)
 
-## Suggested license
+## License
 
-MIT License (see `LICENSE`). If you prefer a different license, replace the file accordingly.
+MIT License (see `LICENSE`).
