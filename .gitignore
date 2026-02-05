@@ -1,1 +1,5 @@
 .env
+config/
+data/
+nginx/certs/*.crt
+nginx/certs/*.key
