@@ -9,14 +9,19 @@ Search Kit is a minimal Docker Compose setup that runs [SearXNG](https://docs.se
 ## Quick start
 
 1. Place your TLS certificate and key in `nginx/certs/` as `server.crt` and `server.key`.
-2. Add your SearXNG configuration in `./config/` (mounted at `/etc/searxng/`).
-3. (Optional) Create a `.env` file to set:
-   - `TZ` (defaults to `UTC`)
+2. Copy `.env.example` to `.env` if you want to override the defaults:
    - `NGINX_PORT` (defaults to `8443`)
-4. Start the stack:
+   - `TZ` (defaults to `UTC`)
+3. Start the stack the first time to generate `settings.yml`:
 
    ```bash
    docker compose up -d
+   ```
+
+4. Update `./config/settings.yml` after the first start (see the [SearXNG admin guide](https://docs.searxng.org/admin/index.html)), then restart:
+
+   ```bash
+   docker compose restart
    ```
 
 5. Open `https://localhost:8443` (or your configured port).
